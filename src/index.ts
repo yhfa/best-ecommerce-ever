@@ -14,6 +14,12 @@ const controllers: Controller[] = [
   new AuthController(),
   new ProductController(),
 ];
+
+const globalMiddleware: RequestHandler[] = [
+  urlencoded({ extended: false }),
+  json(),
+];
+
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
