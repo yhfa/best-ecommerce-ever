@@ -10,7 +10,10 @@ import ProductController from './controllers/product.controller';
 const app = express();
 const server = new RestServer(app, AppDataSource, appConfig);
 
-// Development logging
+const controllers: Controller[] = [
+  new AuthController(),
+  new ProductController(),
+];
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
