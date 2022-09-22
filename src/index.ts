@@ -21,7 +21,7 @@ const globalMiddleware: RequestHandler[] = [
 ];
 
 if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'));
+  globalMiddleware.push(morgan('dev'));
 }
 
 const port = process.env.PORT || 3000;
