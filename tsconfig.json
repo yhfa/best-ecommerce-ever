@@ -3,7 +3,11 @@
     "target": "esnext",
     "module": "commonjs",
     "outDir": "/dist",
-    "sourceMap": true
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true
   },
   "exclude": ["./node_modules"],
   "include": ["src/**/*.ts"]
